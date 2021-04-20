@@ -25,7 +25,7 @@ const resolvers = {
   Vote
 };
 
-const server = new ApolloServer({
+const server = new ApolloServer({cors: true,
   typeDefs: fs.readFileSync(
     path.join(__dirname, 'schema.graphql'),
     'utf8'
